@@ -19,9 +19,11 @@
 
 package com.robrit.fluidity.common.util;
 
-import org.apache.logging.log4j.Level;
+import com.robrit.fluidity.common.ref.ModInformation;
 
-import cpw.mods.fml.common.FMLLog;
+import net.minecraftforge.fml.common.FMLLog;
+
+import org.apache.logging.log4j.Level;
 
 public class LogHelper {
 
