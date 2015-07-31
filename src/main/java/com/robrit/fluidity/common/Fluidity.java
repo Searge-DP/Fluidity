@@ -60,6 +60,8 @@ public class Fluidity {
 
   @Mod.EventHandler
   public static void init(FMLInitializationEvent event) {
+
+
     if (ModInformation.DEBUG_MODE) {
       LogHelper.info(String.format("Finished initialisation stage for %s",
                                    ModInformation.MOD_ID));
@@ -68,6 +70,8 @@ public class Fluidity {
 
   @Mod.EventHandler
   public static void postInit(FMLPostInitializationEvent event) {
+    proxy.registerEventHandlers();
+
     if (ModInformation.DEBUG_MODE) {
       LogHelper.info(String.format("Finished post-initialisation stage for %s",
                                    ModInformation.MOD_ID));

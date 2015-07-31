@@ -19,8 +19,19 @@
 
 package com.robrit.fluidity.client.proxy;
 
+import com.robrit.fluidity.client.event.TextureRegisterEvent;
 import com.robrit.fluidity.common.proxy.CommonProxy;
 
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
+
+@SideOnly(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
 
+  @Override
+  public void registerEventHandlers() {
+    super.registerEventHandlers();
+    MinecraftForge.EVENT_BUS.register(new TextureRegisterEvent());
+  }
 }

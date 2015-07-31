@@ -20,5 +20,5 @@
 package com.robrit.fluidity.common.proxy;
 
 public interface IProxy {
-
+  void registerEventHandlers();
 }
